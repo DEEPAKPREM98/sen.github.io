@@ -8,8 +8,15 @@ app.use(express.urlencoded());
 
 app.use(express.static(path.join(__dirname, "/")));
 
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 
 //HOME PAGE
+app.get('/home', function (req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 
 
