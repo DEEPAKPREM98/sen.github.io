@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1075px)" href="phone.css">
+    <style>
+        body{
+            background-color: rgb(139, 199, 255);
+        }
+        #navbar::before {
+            content: "";
+            background-color: rgb(9, 93, 142);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: .3;
+        }
+
+        #home {
+            flex-direction: column;
+            padding-top: 50px;
+              
+        }
+        
+
+        #home::before {
+           
+            background-color: rgb(9, 98, 182);
+            background-position: center;
+            background-size: cover;
+            
+            width: 100%;
+            opacity: .8;
+        }
+
+        #home img {
+            height: 170px;
+            width: 140px;
+            
+        }
+
+        #home img:hover {
+            box-shadow: -4px -4px 3px rgba(0, 162, 255, 0.493);
+            transform: scale(1.02);
+        }
+
+        #home h1 {
+            font-size: 40px;
+        }
+
+        #home h2 {
+            text-align: justify;
+            margin: 1.2% 18%;
+        }
+
+        footer {
+            background: black;
+            padding: 10px;
+            text-align: center;
+            background-color: rgba(0, 138, 192, 0.376);
+            color: rgb(0, 38, 63);
+            font-size: 15px;
+            margin-top: 6.6%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="back.png" alt="no img">
+        </div>
+        <ul>
+            <li class="item"><a href="/home">HOME</a></li>
+            <li class="item"><a href="services">SENTIMENT ANALYSIS</a></li>
+            <li class="item"><a href="about">ABOUT ME</a></li>
+            <li class="item"><a href="contact">CONTACT ME</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="center">
+        <div>
+            <h1>DEVELOPER</h1>
+        </div>
+        <div>
+            <img src="back17.jpg" alt="">
+        </div>
+        <div>
+            <h2>
+                Hello, My name is Deepak Singh. I am a BTech final year CSE student from ABES Engineering College. This is my final year project. I have made this project by working very hard, from zero to this level. I have used nodejs for backened frame work. I hope you like my work and if you want to contact me you can fill the details in contact page.
+            </h2>
+        </div>
+
+    </section>
+    
+
+
+
+</body>
+
+</html>

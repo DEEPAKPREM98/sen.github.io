@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(max-width: 500px)" href="phone.css">
+    <style>
+        body{
+            background-color: rgb(45, 131, 201);
+        }
+        #navbar::before {
+            content: "";
+            background-color: rgb(205, 237, 255);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: .3;
+        }
+
+        #home {
+            flex-direction: column;
+            padding: 100px 150px;
+        }
+
+        #home::before {
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            opacity: .9;
+        }
+
+        form .upp input,
+        textarea {
+            background: none;
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 20px;
+            font-size: 1.35rem;
+            height: 35px;
+            border: 3px solid rgb(0, 0, 0);
+            color: rgb(205, 209, 237);
+            outline: none;
+        }
+
+        form .upp input:hover,
+        textarea:hover {
+            transform: scale(1.1);
+        }
+
+        form {
+            flex-direction: column;
+            
+            width: 100%;
+        }
+
+        .form-group {
+            padding: 16px;
+            
+            width: 100%;
+        }
+
+        .h-primary {
+            font-size: 2.1rem;
+            padding: 0px 25px 25px 20px;
+            color: rgb(168, 229, 240);
+        }
+
+        ::placeholder {
+            color: rgb(192, 204, 228);
+            font-size: 1.6rem;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            background-color: rgba(0, 138, 192, 0.376);
+            color: rgb(173, 218, 255);
+            font-size: 15px;
+            margin-top: 6.6%;
+        }
+
+        .btn input {
+            color: rgb(255, 255, 255);
+        }
+        @media (max-width: 500px){
+            form .upp input,
+                    textarea {
+                        width: 15rem;
+                        padding: 10px;
+                        height: 20px; 
+                    }
+            #home{
+                flex-direction: column;
+            }
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="back.png" alt="no img">
+        </div>
+        <ul>
+            <li class="item"><a href="/home">HOME</a></li>
+            <li class="item"><a href="services">SENTIMENT ANALYSIS</a></li>
+            <li class="item"><a href="about">ABOUT ME</a></li>
+            <li class="item"><a href="contact">CONTACT ME</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="center">
+        <div>
+            <h1 class="h-primary center">CONNECT WITH ME</h1>
+        </div>
+        <form action="" class="center">
+            <div class="upp">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Enter your e-mail">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="phone" id="phone" placeholder="Enter your phone no">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" cols="30" rows="10">Any Suggestions</textarea>
+                </div>
+            </div>
+            <div class="btn">
+                <input class="btnn" type="submit" value="SUBMIT">
+            </div>
+        </form>
+        </div>
+
+
+    </section>
+    
+
+</body>
+
+</html>

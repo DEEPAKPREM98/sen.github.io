@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENTIMENT ANALYSIS</title>
+    <script>
+        function run() {
+            alert("YOUR DATA IS GOING TO PROCESS PLEASE WAIT FOR SOME TIME FOR THE BEST RESULTS")
+        }
+        function runy() {
+            alert("YOUR DATA IS PROCESSING SO WAIT!")
+        }
+
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(max-width: 500px)" href="phone.css">
+    <style>
+        body{
+            background-color: rgb(106, 182, 253);
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: rgb(30, 169, 249);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: .7;
+        }
+
+        #home {
+            flex-direction: row;
+            padding: 100px 100px;
+            height: 30rem;
+        
+        }
+
+        #home::before {
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            opacity: .8;
+        }
+
+        form .upp input,
+        textarea {
+            background: none;
+            width: 400px;
+            padding: 0.8rem;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            height: 23px;
+            border: 3px solid rgb(0, 89, 148);
+            color: rgb(255, 255, 255);
+            outline: none;
+        }
+
+        form {
+            flex-direction: column;
+            margin-left: 30px;
+        }
+        form .upp input:hover,
+        textarea:hover {
+            transform: scale(1.1);
+        }
+
+        .form-group {
+            padding: 8px;
+        }
+
+        .h-primary {
+            font-size: 2.8rem;
+            padding: 25px 20px;
+        }
+
+        ::placeholder {
+            color: rgb(255, 255, 255);
+            font-size: 1.3rem;
+        }
+
+        footer {
+            background: black;
+            padding: 10px;
+            text-align: center;
+            background-color: rgba(0, 138, 192, 0.376);
+            color: rgb(197, 232, 255);
+            font-size: 15px;
+            
+        }
+
+        .btn input {
+            color: rgb(255, 255, 255);
+        }
+
+        .result {
+            flex-direction: column;
+            margin-right: 50px;
+        }
+
+        #bttn {
+            text-decoration: none;
+        }
+
+        #bttn a:hover {
+            color: darkblue;
+        }
+
+        .btnn:hover{
+            color: darkblue;
+        }
+
+        #bttn a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        .centerimg img{
+            height: 50%;
+            width: 50%;
+        }
+
+        @media (max-width: 500px){
+            form .upp input,
+                    textarea {
+                        width: 13rem;
+                        padding: 10px;
+                        height: 20px; 
+                    }
+            #home{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            
+        }
+
+        
+            
+        
+
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="back.png" alt="no img">
+        </div>
+        <ul>
+            <li class="item"><a href="/home">HOME</a></li>
+            <li class="item"><a href="services">SENTIMENT ANALYSIS</a></li>
+            <li class="item"><a href="about">ABOUT ME</a></li>
+            <li class="item"><a href="contact">CONTACT ME</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="center">
+        <form action="/" method="POST" class="center">
+            <div class="upp">
+                <div class="form-group">
+                    <input type="text" name="name1" id="name1" placeholder="Enter first name to compare">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="name2" id="name2" placeholder="Enter second name to compare">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="name3" id="name3" placeholder="Enter third name to compare">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="name4" id="name4" placeholder="Enter fouth name to compare">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="name5" id="name5" placeholder="Enter fifth name to compare">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="name6" id="name6" placeholder="no of tweets from each name">
+                </div>
+            </div>
+
+            <div class="btn">
+                <input class="btnn" type="submit" onclick="run()" value="SUBMIT">
+            </div>
+
+        </form>
+        <div class="center centerimg">
+            <img src="back10.png" alt="">
+
+        </div>
+        <div class="result center">
+            <h2 class="capi">CHECK ANALYSIS</h2>
+            <button id="bttn" class="btnn">
+                <a href="/h">CHECK</a>
+            </button>
+        </div>
+
+    </section>
+
+    
+
+</body>
+
+</html>

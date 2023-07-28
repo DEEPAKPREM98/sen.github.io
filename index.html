@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(max-width: 500px)" href="phone.css">
+    <style>
+        #navbar::before {
+            content: "";
+            background-color: rgb(24, 151, 255);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: .3;
+        }
+
+        #home {
+            flex-direction: row;
+            padding: 50px 50px;
+            height: 35%;
+            background-color: rgb(132, 198, 252);
+        }
+
+        #home::before {
+            background-position: center;
+            background-size: cover;
+            height: 110%;
+            width: 100%;
+            opacity: .8;
+        }
+
+        .textalign {
+            text-align: center;
+        }
+
+        .box1 h1 {
+
+            font-size: 40px;
+            color: rgb(0, 73, 141);
+            text-shadow: 1px 1px 2px rgb(0, 174, 255);
+        }
+
+        .box1 h1:hover {
+            transform: scale(1.4);
+            color: rgb(46, 119, 255);
+            text-shadow: 1px 1px 2px rgb(0, 174, 255);
+        }
+
+        
+        #below::before {
+            background-color: rgb(67, 171, 255);
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 80%;
+            z-index: -1;
+            opacity: .7;
+        }
+
+        #below {
+            display: flex;
+            height: 50%;
+            background-color: rgb(173, 218, 255);
+        }
+
+        .box3 {
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .box4 {
+            height: 20rem;
+            width: 40rem;
+            
+            margin: auto;
+        }
+
+        .box4 img {
+            height: 50%;
+            width: 50%;
+           
+        }
+
+        .box4 img:hover {
+            transform: scale(1.3);
+        }
+
+        .box3 h1 {
+            font-size: 50px;
+            margin: 30px 100px;
+
+        }
+
+        .box3 h2 {
+            margin: 30px 50px;
+            font-size: 30px;
+            text-align: justify;
+            color: rgb(27, 99, 215);
+        }
+
+        #emoji::before {
+            background-color: rgb(16, 148, 255);
+            background-position: center;
+            background-size: cover;
+            content: "";
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+            opacity: .7;
+        }
+
+        #emoji{
+            height: 60%;
+            background-color: rgb(105, 187, 255);
+        }
+
+        .box5 {
+            height: 200px;
+            width: 300px;
+            flex-direction: column;
+        }
+
+        .box5 img {
+            height: 90%;
+            width: 50%;   
+        }
+
+        #sarcasm {
+            border-radius: 70%;  
+        }
+
+        .emo {
+            font-size: 20px;
+            margin-top: 5%;
+            color: rgb(234, 247, 255);   
+        }
+
+        .box5 img:hover {
+            transform: scale(1.2);
+        }
+
+        .box8 {
+            flex-direction: column;
+        }
+
+        .box8 h1 {
+            font-size: 50px;
+            padding: 50px 70px;
+            color: rgb(0, 99, 212);
+        }
+
+        #last::before {
+            background-color: rgb(0, 162, 255);
+            background-position: center;
+            background-size: cover;
+            content: "";
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+            opacity: .5;
+        }
+
+        #last {
+            flex-direction: row;
+            height: 50%;
+            background-color: rgb(139, 202, 253);
+        }
+
+        .box9 {
+            height: 575px;
+            width: 63%;
+        }
+
+        .box9 img {
+            height: 80%;
+            width: 90%;
+        }
+
+        .box9 img:hover {
+            transform: scale(1.3);
+        }
+
+        .box10 {
+            height: 100%;
+            width: 80%;
+            text-align: justify;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            background-color: rgba(0, 138, 192, 0.376);
+            color: rgb(1, 11, 18);
+            font-size: 15px;
+            margin-top: -1.2%;
+        }
+
+        .box3 h1 {
+            color: rgb(12, 134, 199);
+        
+        }
+
+        .box10 h1 {
+            padding: 40px 80px 40px 40px;
+            color: rgb(24, 98, 236);
+            font-size: 30px;
+
+        }
+
+        #footer {
+            position: absolute;
+            width: 644px;
+            height: 20px;
+            margin: 0 auto;
+        }
+        @media (max-width: 500px){
+            #last{
+                flex-direction: column;
+            }
+            .box7{
+                flex-direction: column;
+            }
+            #below{
+                flex-direction: column-reverse;
+            }
+            .box4{
+                height: 100px;
+                width: 100px;
+            }
+            .box9{
+                height: 100px;
+                width: 100px;
+            }
+            .box1 h1:hover {
+            transform: scale(1.1);
+            
+        }
+            
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="back10.png" alt="no img">
+        </div>
+        <ul>
+            <li class="item"><a href="home">HOME</a></li>
+            <li class="item"><a href="services">SENTIMENT ANALYSIS</a></li>
+            <li class="item"><a href="about">ABOUT ME</a></li>
+            <li class="item"><a href="contact">CONTACT ME</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="center">
+        <div class="box1 center">
+            <h1 class="textalign">
+                WELCOME TO THE WORLD OF TWEETS
+            </h1>
+        </div>
+        
+    </section>
+
+    <section id="below">
+        <div class="box3 center">
+            <h1>
+                SENTIMENT ANALYSIS
+            </h1>
+            <h2>
+                SENTIMENT ANALYSIS IS CONTEXTUAL MINING OF TEXT WHICH IDENTIFIES AND EXTRACTS SUBJECTIVE INFORMATION IN
+                SOURCE MATERIAL. I HAVE DONE SENTIMENT ANALYSIS BY SARCASM DETECTION, EMOTION DETECTION AND SENTIMENT
+                DETECTION.
+            </h2>
+        </div>
+        <div class="box4 center">
+            <img src="back10.png" alt="">
+        </div>
+    </section>
+    <section id="emoji">
+        <div class="box8 center">
+            <h1>SENTIMENTS</h1>
+        </div>
+        <div class="box7 center">
+            <div class="box5 center">
+                <img src="happy.png" alt="">
+                <h1 class="emo">POSITIVE</h1>
+
+            </div>
+            <div class="box5 center">
+                <img src="sad.png" alt="">
+                <h1 class="emo">NEGATIVE</h1>
+
+            </div>
+            <div class="box5 center">
+                <img src="neutral.png" alt="">
+                <h1 class="emo">NEUTRAL</h1>
+
+            </div>
+        </div>
+        <div class="box7 center">
+            <div class="box5 center">
+                <img src="surprise.png" alt="">
+                <h1 class="emo">SURPRISE</h1>
+
+            </div>
+            <div class="box5 center">
+                <img src="angry.png" alt="">
+                <h1 class="emo">ANGRY</h1>
+
+            </div>
+            <div class="box5 center">
+                <img src="sarcasm.gif" alt="" id="sarcasm">
+                <h1 class="emo">SARCASTIC</h1>
+            </div>
+        </div>
+
+    </section>
+    <section id="last" class="center">
+        <div class="box9 center">
+            <img src="back9.png" alt="">
+
+        </div>
+        <div class="box10 center">
+            <h1>
+                I HAVE USED DEEP LEARNING WITH GLOVE MODEL FOR SARCASM DETECTION, VADER(VALENCE AWARE DICTIONARY AND
+                SENTIMENT REASONER) FOR SENTIMENT DETECTION AND TEXT2EMOTION FOR EMOTION DETECTION. THIS WHOLE
+                COMBINATION OF THREE PACKAGES GIVES US A BETTER AND DEEP UNDERSTANDING OF SENTIMENT ANALYSIS.
+            </h1>
+        </div>
+
+    </section>
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANALYSIS RESULT</title>
+    <link rel="stylesheet" media="(max-width: 500px)" href="phone.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+            margin-bottom: 20px;
+            
+        }
+
+        .center img {
+            box-shadow: 6px 6px 5px rgb(0, 119, 255);
+            margin-right: 30px;
+            border: 3px solid black
+        }
+
+        .center img:hover {
+            box-shadow: -6px -6px 5px rgb(0, 132, 255);
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Cinzel', serif;
+            background-color: rgb(104, 200, 255);
+        }
+
+        #navbar img {
+            height: 45px;
+            width: 55px;
+            border-radius: 60px;
+            margin: 10px 10px 5px 20px;
+        }
+
+        #navbar {
+            display: flex;
+            position: relative;
+            top: 0px;
+            align-items: center;
+        }
+
+        #navbar ul li a {
+            display: block;
+            padding: 5px 5px 3px 10px;
+            text-decoration: none;
+            color: rgb(239, 249, 255);
+            margin: 10px 0px 0px 10px;
+            font-size: 15px;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #navbar ul li a:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgba(44, 103, 131, 0.37);
+        }
+
+        #home {
+            flex-direction: column;
+            padding: 20px 50px;
+            height: fit-content;
+        }
+
+        .btnn {
+            cursor: pointer;
+            padding: 5px 20px;
+            margin: 10px;
+            border-radius: 15px;
+            border: 4px solid rgb(27, 126, 255);
+            background-color: rgb(27, 183, 255);
+            font-size: 20px;
+        }
+
+        .head h1 {
+            color: blue;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 3px rgb(0, 174, 255);
+            text-decoration-line: underline;
+        }
+
+        #employee_table {
+            display: none;
+            font-size: 8px;
+            font-weight: bold;
+        }
+        .cntr{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .cntr h2{
+            text-decoration: underline;
+        }
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+
+        $.ajax({
+            url: "ile1.csv",
+            dataType: "text",
+            success: function (data) {
+                var employee_data = data.split(/\r?\n|\r/);
+                var table_data = '<table class="table table-bordered table-striped">';
+                for (var count = 0; count < employee_data.length; count++) {
+                    var cell_data = employee_data[count].split(",");
+                    table_data += '<tr>';
+                    for (var cell_count = 0; cell_count < cell_data.length; cell_count++) {
+                        if (count === 0) {
+                            table_data += '<th>' + cell_data[cell_count] + '</th>';
+                        }
+                        else {
+                            table_data += '<td>' + cell_data[cell_count] + '</td>';
+                        }
+                    }
+                    table_data += '</tr>';
+                }
+                table_data += '</table>';
+                $('#employee_table').html(table_data);
+            }
+        });
+        $.ajax({
+            url: "ile2.csv",
+            dataType: "text",
+            success: function (data) {
+                var employee_data = data.split(/\r?\n|\r/);
+                var table_data = '<table class="table table-bordered table-striped">';
+                for (var count = 0; count < employee_data.length; count++) {
+                    var cell_data = employee_data[count].split(",");
+                    table_data += '<tr>';
+                    for (var cell_count = 0; cell_count < cell_data.length; cell_count++) {
+                        if (count === 0) {
+                            table_data += '<th>' + cell_data[cell_count] + '</th>';
+                        }
+                        else {
+                            table_data += '<td>' + cell_data[cell_count] + '</td>';
+                        }
+                    }
+                    table_data += '</tr>';
+                }
+                table_data += '</table>';
+                $('#employe_table').html(table_data);
+            }
+        });
+        
+        $.ajax({
+            url: "ile4.csv",
+            dataType: "text",
+            success: function (data) {
+                var employee_data = data.split(/\r?\n|\r/);
+                var table_data = '<table class="table table-bordered table-striped">';
+                for (var count = 0; count < employee_data.length; count++) {
+                    var cell_data = employee_data[count].split(",");
+                    table_data += '<tr>';
+                    for (var cell_count = 0; cell_count < cell_data.length; cell_count++) {
+                        if (count === 0) {
+                            table_data += '<th>' + cell_data[cell_count] + '</th>';
+                        }
+                        else {
+                            table_data += '<td>' + cell_data[cell_count] + '</td>';
+                        }
+                    }
+                    table_data += '</tr>';
+                }
+                table_data += '</table>';
+                $('#emplo_table').html(table_data);
+            }
+        });
+        $.ajax({
+            url: "ile5.csv",
+            dataType: "text",
+            success: function (data) {
+                var employee_data = data.split(/\r?\n|\r/);
+                var table_data = '<table class="table table-bordered table-striped">';
+                for (var count = 0; count < employee_data.length; count++) {
+                    var cell_data = employee_data[count].split(",");
+                    table_data += '<tr>';
+                    for (var cell_count = 0; cell_count < cell_data.length; cell_count++) {
+                        if (count === 0) {
+                            table_data += '<th>' + cell_data[cell_count] + '</th>';
+                        }
+                        else {
+                            table_data += '<td>' + cell_data[cell_count] + '</td>';
+                        }
+                    }
+                    table_data += '</tr>';
+                }
+                table_data += '</table>';
+                $('#empl_table').html(table_data);
+            }
+        });
+        $.ajax({
+            url: "ile3.csv",
+            dataType: "text",
+            success: function (data) {
+                var employee_data = data.split(/\r?\n|\r/);
+                var table_data = '<table class="table table-bordered table-striped">';
+                for (var count = 0; count < employee_data.length; count++) {
+                    var cell_data = employee_data[count].split(",");
+                    table_data += '<tr>';
+                    for (var cell_count = 0; cell_count < cell_data.length; cell_count++) {
+                        if (count === 0) {
+                            table_data += '<th>' + cell_data[cell_count] + '</th>';
+                        }
+                        else {
+                            table_data += '<td>' + cell_data[cell_count] + '</td>';
+                        }
+                    }
+                    table_data += '</tr>';
+                }
+                table_data += '</table>';
+                $('#employ_table').html(table_data);
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="back10.png" alt="no img">
+        </div>
+        <ul>
+            <li class="item"><a href="/">HOME</a></li>
+            <li class="item"><a href="/services">SENTIMENT ANALYSIS</a></li>
+            <li class="item"><a href="/about">ABOUT ME</a></li>
+            <li class="item"><a href="/contact">CONTACT ME</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="center">
+        <div class="center head">
+            <h1>SENTIMENT ANALYSIS RESULTS</h1>
+        </div>
+
+        
+
+        <div class="cntr">
+            <h2>SENTIMENTS ANALYSIS</h2>
+            <div class="center">
+                <img src="/p4.jpg" alt="no image">
+            </div>
+            <div id="emplo_table">
+            </div>
+        </div>
+
+        <div class="cntr">
+            <h2>COMPOUND SCORE</h2>
+            <div class="center">
+                <img src="/p1.jpg" alt="no">
+            </div>
+            <div id="employe_table">
+            </div>
+        </div>
+
+        <div class="cntr">
+            <h2>SARCASM ANALYSIS</h2>
+            <div class="center">
+                <img src="/p2.jpg" alt="no">
+            </div>
+            <div id="empl_table">
+            </div>
+        </div>
+
+        <div class="cntr">
+            <h2>EMOTION ANALYSIS</h2>
+            <div class="center">
+                <img src="/p3.jpg" alt="no image">
+            </div>
+            <div id="employ_table">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="table-responsive">
+                <h1 align="center">DATA FRAME TABLE</h1>
+                <br />
+                <div align="center">
+                    <button type="button" name="load_data" id="load_data" onclick="show()"
+                        class="btn btn-info btnn">Load Data</button>
+                </div>
+                <br />
+                <div id="employee_table">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+<script>
+
+    function show() {
+        let para = document.getElementById('employee_table')
+        if (para.style.display != "block") {
+            para.style.display = 'block'
+        }
+        else {
+            para.style.display = 'none'
+        }
+    }
+</script>
+
+</html>
