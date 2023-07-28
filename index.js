@@ -6,7 +6,7 @@ const port = 3000;
 const fs = require('fs')
 app.use(express.urlencoded());
 
-app.use(express.static(path.join(__dirname, "/")));
+app.use(express.static(path.join(__dirname, '/')));
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
