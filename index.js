@@ -9,39 +9,39 @@ app.use(express.urlencoded());
 
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '/index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 
 //HOME PAGE
 app.get('/home', function (req, res) {
-    res.sendFile(path.join(__dirname, '/index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 
 
 //SERVICES PAGE
 app.get('/services', function (req, res) {
-    res.sendFile(path.join(__dirname, '/services.html'));
+    res.sendFile(path.join(__dirname, 'services.html'));
 });
 
 
 //ABOUT PAGE
 app.get('/about', function (req, res) {
-    res.sendFile(path.join(__dirname, '/about.html'));
+    res.sendFile(path.join(__dirname, 'about.html'));
 });
 
 
 //CONTACT ME PAGE
 app.get('/contact', function (req, res) {
-    res.sendFile(path.join(__dirname, '/contact.html'));
+    res.sendFile(path.join(__dirname, 'contact.html'));
 });
 
 
 //RESULT PAGE
 app.get('/h', function (req, res) {
 
-    res.sendFile(path.join(__dirname, '/h.html'));
+    res.sendFile(path.join(__dirname, 'h.html'));
 });
 
     
